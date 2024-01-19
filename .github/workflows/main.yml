@@ -1,0 +1,7 @@
+name: 22MCC20033
+on: 
+  push: branches ["main"]
+  edited: workflow_dispatch
+jobs:
+   runs-on: ubuntu-latest
+    build: echo "Build Successfully"
