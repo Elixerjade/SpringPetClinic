@@ -1,7 +1,15 @@
-name: 22MCC20033
-on: 
-  push: branches ["main"]
-  edited: workflow_dispatch
+name: 22mcc20033
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
 jobs:
-   runs-on: ubuntu-latest
-    build: echo "Build Successfully"
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "Build successful"
